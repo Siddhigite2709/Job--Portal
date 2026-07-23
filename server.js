@@ -4,7 +4,9 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://job-portal-h1jtgdyd6-siddhi-s-projects-c5f84d41.vercel.app/"
+}));
 app.use(express.json());
 
 // In-memory database (temporary)
