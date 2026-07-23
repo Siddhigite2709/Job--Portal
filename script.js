@@ -190,7 +190,7 @@ function submitApplication() {
   const jobTitle = document.getElementById("modalTitle").textContent;
   const company = document.getElementById("modalCompany").textContent;
 
-  fetch("http://localhost:3000/api/applications", {
+  fetch("https://job-portal-backend-49g4.onrender.com/api/applications", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, jobTitle, company, jobId: 1 })
@@ -303,7 +303,7 @@ document.querySelectorAll(".category-card, .job-card, .step-card, .testimonial-c
 
 // ===== INIT =====
 // Fetch jobs from backend API
-fetch("http://localhost:3000/api/jobs")
+fetch("https://job-portal-backend-49g4.onrender.com/api/jobs")
   .then(res => res.json())
   .then(data => {
     renderJobs(data.data);
